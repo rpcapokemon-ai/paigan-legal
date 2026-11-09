@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>นโยบายความเป็นส่วนตัว — ไปกัน (PaiGan)</title>
+<meta name="description" content="นโยบายความเป็นส่วนตัวและวิธีขอลบข้อมูลของแอปไปกัน (PaiGan) / Privacy policy and data deletion for the PaiGan app">
+<style>
+  :root {
+    --bg: #FFF8EC;
+    --card: #FFFFFF;
+    --border: #E1E6E4;
+    --text: #15201E;
+    --muted: #5B6664;
+    --teal: #0E6B66;
+    --teal-dark: #0A4F4B;
+    --teal-tint: #E3F1EF;
+    --accent: #B8441D;
+    --accent-tint: #FBEDE6;
+    --accent-ink: #7A2C12;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans Thai", "Noto Sans Thai", "Sarabun", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+  header.top { margin-bottom: 20px; }
+  .brand { color: var(--teal); font-weight: 600; letter-spacing: .02em; margin: 0 0 4px; }
+  h1, h2, h3 { font-family: "Kanit", "IBM Plex Sans Thai", "Noto Sans Thai", system-ui, sans-serif; line-height: 1.35; }
+  h1 { font-size: 1.6rem; margin: 0 0 8px; font-weight: 600; }
+  h2 { font-size: 1.2rem; margin: 0 0 8px; font-weight: 600; color: var(--teal-dark); }
+  h3 { font-size: 1.02rem; margin: 16px 0 4px; font-weight: 600; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 1.25em; }
+  li { margin-bottom: 6px; }
+  a { color: var(--teal); font-weight: 600; text-underline-offset: 3px; }
+  a:hover { color: var(--teal-dark); }
+  .meta { color: var(--muted); font-size: .92rem; }
+  .lang-switch { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 0 0; }
+  .lang-switch a {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px;
+    border: 1.5px solid var(--teal); border-radius: 14px; text-decoration: none; background: var(--card);
+  }
+  .lang-switch a:hover { background: var(--teal-tint); }
+  section.card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 20px 18px; margin: 0 0 16px;
+  }
+  section.card.delete { border: 2px solid var(--accent); }
+  section.card.delete h2 { color: var(--accent-ink); }
+  .note {
+    background: var(--teal-tint); color: var(--teal-dark); border-radius: 14px;
+    padding: 12px 14px; margin: 0 0 12px;
+  }
+  .warn {
+    background: var(--accent-tint); color: var(--accent-ink); border-radius: 14px;
+    padding: 12px 14px; margin: 0 0 12px;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 12px; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: .88rem; }
+  td:first-child { font-weight: 600; width: 38%; }
+  ol.steps { padding-left: 1.4em; }
+  ol.steps li { margin-bottom: 8px; }
+  code { background: var(--teal-tint); color: var(--teal-dark); padding: 1px 6px; border-radius: 6px; font-size: .92em; word-break: break-all; }
+  hr.lang { border: 0; border-top: 2px dashed var(--border); margin: 40px 0 32px; }
+  footer { color: var(--muted); font-size: .9rem; text-align: center; margin-top: 24px; }
+  @media (max-width: 480px) {
+    table, thead, tbody, tr, th, td { display: block; }
+    thead { display: none; }
+    tr { border-bottom: 1px solid var(--border); padding: 8px 0; }
+    td { border: 0; padding: 2px 0; width: auto !important; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<!-- ============================== ภาษาไทย ============================== -->
+<article id="th" lang="th">
+  <header class="top">
+    <p class="brand">ไปกัน · PaiGan</p>
+    <h1>นโยบายความเป็นส่วนตัว</h1>
+    <p class="meta">มีผลตั้งแต่วันที่ 9 พฤศจิกายน 2569 (ค.ศ. 2026)</p>
+    <nav class="lang-switch" aria-label="ภาษา / Language">
+      <a href="#th-delete">ขอลบบัญชีและข้อมูล</a>
+      <a href="#en" lang="en">English</a>
+    </nav>
+  </header>
+
+  <section class="card">
+    <h2>1. เราคือใคร</h2>
+    <p>แอป “ไปกัน (PaiGan)” เป็นแอปวางแผนเที่ยวทั้งเที่ยวคนเดียวและเที่ยวเป็นกลุ่ม พัฒนาและให้บริการโดยผู้พัฒนาแอปไปกัน (PaiGan) ซึ่งเป็นผู้ควบคุมข้อมูลส่วนบุคคลตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)</p>
+    <p>ติดต่อเรื่องข้อมูลส่วนบุคคล: <a href="mailto:rpcapokemon@gmail.com">rpcapokemon@gmail.com</a></p>
+  </section>
+
+  <section class="card">
+    <h2>2. ข้อมูลที่เราเก็บบนเซิร์ฟเวอร์ และเหตุผล</h2>
+    <p>แอปไม่ต้องสมัครด้วยอีเมลหรือเบอร์โทร เมื่อเปิดแอปครั้งแรก ระบบจะสร้างบัญชีแบบไม่ระบุตัวตนให้อัตโนมัติ ข้อมูลด้านล่างถูกส่งขึ้นเซิร์ฟเวอร์เพื่อให้ทุกคนในทริปเห็นข้อมูลเดียวกันและสำรองข้อมูลทริปของคุณ</p>
+    <table>
+      <thead><tr><th>ข้อมูล</th><th>ใช้ทำอะไร</th></tr></thead>
+      <tbody>
+        <tr><td>รหัสผู้ใช้แบบไม่ระบุตัวตน (สุ่มขึ้นมา) และเวลาที่ใช้งาน</td><td>ระบุว่าบัญชีไหนเข้าถึงทริปไหนได้ และซิงก์ข้อมูล</td></tr>
+        <tr><td>ชื่อเล่นของสมาชิกในทริป และชื่อไหนคือ “ฉัน”</td><td>แสดงรายชื่อ แจกหน้าที่ และหารค่าใช้จ่าย</td></tr>
+        <tr><td>ทักษะของสมาชิก (เช่น ขับรถ ทำอาหาร ว่ายน้ำเป็น มีใบขับขี่มอเตอร์ไซค์) ดื่ม/ไม่ดื่มแอลกอฮอล์ และเป็นผู้สูงอายุหรือไม่</td><td>แจกหน้าที่ให้เหมาะกับแต่ละคน เช่น ให้ผู้สูงอายุได้งานเบา</td></tr>
+        <tr><td>ข้อมูลทริป: ประเภททริป วันไป-กลับ จำนวนผู้ใหญ่/เด็ก/ผู้สูงอายุ จำนวนห้อง จังหวัด/อำเภอ และแนวเที่ยวที่เลือก</td><td>จัดของที่ต้องเตรียม หน้าที่ และแผนเที่ยว</td></tr>
+        <tr><td>ชื่อที่พักที่เจ้าของทริปพิมพ์เอง</td><td>ให้ทุกคนในทริปเห็นว่าพักที่ไหน</td></tr>
+        <tr><td>หน้าที่และของที่ต้องเตรียม คนรับผิดชอบ กำหนดส่ง และสถานะเสร็จ</td><td>ติดตามว่าใครทำอะไร</td></tr>
+        <tr><td>แผนเที่ยวรายวัน (เวลา ชื่อกิจกรรม โน้ต คนรับผิดชอบ)</td><td>แชร์แผนให้ทุกคนในทริป</td></tr>
+        <tr><td>ค่าใช้จ่าย: รายการ ยอดเงิน คนจ่าย วิธีหาร โน้ต และการโอนคืนระหว่างกัน</td><td>หารเงินและสรุปว่าใครต้องโอนให้ใคร</td></tr>
+        <tr><td>รหัสเชิญเพื่อน (เก็บแบบเข้ารหัสทางเดียว sha256) และครั้งที่กรอกรหัสผิด</td><td>ให้เพื่อนเข้าทริปได้ และกันการเดารหัส</td></tr>
+        <tr><td>หมายเลข IP และข้อมูลการเชื่อมต่อในบันทึก (log) ของผู้ให้บริการเซิร์ฟเวอร์</td><td>ความปลอดภัยและแก้ปัญหาระบบ เก็บตามนโยบายของผู้ให้บริการ</td></tr>
+      </tbody>
+    </table>
+    <p>ฐานทางกฎหมาย: เพื่อให้บริการตามที่คุณขอใช้ (การปฏิบัติตามสัญญา) และประโยชน์อันชอบธรรมด้านความปลอดภัยของระบบ</p>
+  </section>
+
+  <section class="card">
+    <h2>3. ข้อมูลที่อยู่ในเครื่องของคุณเท่านั้น</h2>
+    <p>ข้อมูลต่อไปนี้ไม่ถูกส่งขึ้นเซิร์ฟเวอร์ของเรา</p>
+    <ul>
+      <li>หมายเลขพร้อมเพย์ (เก็บในที่เก็บข้อมูลแบบเข้ารหัสของเครื่อง)</li>
+      <li>เช็กลิสต์ “ของที่ฉันต้องเตรียม” ส่วนตัว</li>
+      <li>ภาพสรุปทริปที่สร้างเพื่อแชร์ จะถูกส่งออกจากเครื่องเฉพาะเมื่อคุณกดแชร์หรือบันทึกเอง</li>
+      <li>ไฟล์รายชื่อ (Excel/CSV) ที่คุณเลือกนำเข้า แอปอ่านในเครื่องและนำเฉพาะชื่อเล่นไปใส่ในรายชื่อทริป</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>4. สิ่งที่เราไม่เก็บ และไม่ทำ</h2>
+    <ul>
+      <li>ไม่เก็บตำแหน่ง GPS อีเมล หรือเบอร์โทรศัพท์</li>
+      <li>ไม่เก็บข้อมูลสุขภาพ (เช่น โรคประจำตัว การแพ้อาหาร)</li>
+      <li>ไม่อ่านรูปภาพในเครื่อง แอปขอสิทธิ์เพียง<strong>บันทึก</strong>ภาพสรุปทริปลงอัลบั้มเมื่อคุณกดบันทึก</li>
+      <li>ไม่มีโฆษณา และไม่มีระบบติดตามหรือวิเคราะห์พฤติกรรมการใช้งาน</li>
+      <li><strong>ไม่ขาย</strong>ข้อมูล และ<strong>ไม่แชร์</strong>ข้อมูลให้บุคคลที่สามเพื่อการตลาดหรือวัตถุประสงค์อื่น</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>5. ผู้ให้บริการที่ประมวลผลข้อมูลแทนเรา</h2>
+    <p>เราใช้ <strong>Supabase</strong> เป็นผู้ให้บริการฐานข้อมูลและระบบบัญชีผู้ใช้ เซิร์ฟเวอร์ตั้งอยู่ที่ภูมิภาค<strong>สิงคโปร์ (Singapore)</strong> Supabase ประมวลผลข้อมูลตามคำสั่งของเราเท่านั้น</p>
+    <p>เมื่อคุณกด “ค้นในแผนที่” แอปจะเปิด Google Maps พร้อมชื่อที่พักเพื่อค้นหา และเมื่อคุณแชร์ภาพหรือลิงก์เชิญผ่านแอปอื่น (เช่น LINE) ข้อมูลที่ส่งไปจะอยู่ภายใต้นโยบายของแอปนั้น ทั้งสองกรณีเกิดขึ้นเฉพาะเมื่อคุณกดเอง</p>
+  </section>
+
+  <section class="card">
+    <h2>6. ใครเห็นข้อมูลทริปของคุณ</h2>
+    <ul>
+      <li>ข้อมูลทริปเห็นได้เฉพาะบัญชีที่อยู่ในทริปนั้น คือเจ้าของทริปและเพื่อนที่เข้าร่วมด้วยรหัสหรือลิงก์เชิญ ระบบตรวจสิทธิ์ที่ฐานข้อมูลทุกครั้ง (Row Level Security)</li>
+      <li>เจ้าของทริปแก้ได้ทุกอย่าง เพื่อนในทริปติ๊กงาน แก้แผนเที่ยว และบันทึกค่าใช้จ่ายได้ ส่วนรายชื่อ ที่พัก และข้อมูลทริป แก้ได้เฉพาะเจ้าของ</li>
+      <li>ข้อมูลส่งระหว่างแอปกับเซิร์ฟเวอร์แบบเข้ารหัส (HTTPS)</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>7. ชื่อของเพื่อนที่คุณใส่แทน</h2>
+    <p>เจ้าของทริปสามารถพิมพ์หรือนำเข้าชื่อเล่นของเพื่อนที่ยังไม่ได้ใช้แอปได้ <strong>ก่อนใส่ชื่อ ทักษะ ข้อมูลการดื่ม หรือการเป็นผู้สูงอายุของผู้อื่น เจ้าของทริปควรได้รับความยินยอมจากคนนั้นก่อน</strong> และใส่เท่าที่จำเป็นต่อการวางแผนเท่านั้น (ชื่อเล่นก็เพียงพอ)</p>
+  </section>
+
+  <section class="card">
+    <h2>8. ระยะเวลาเก็บข้อมูล</h2>
+    <ul>
+      <li>เราเก็บข้อมูลทริปไว้ตราบเท่าที่บัญชีของคุณยังใช้งาน หรือจนกว่าคุณจะขอให้ลบ</li>
+      <li>เมื่อเจ้าของทริปกด “ลบทริปนี้” ในแอป ทริปจะหายจากเครื่องของทุกคนในทริปทันที แต่สำเนาบนเซิร์ฟเวอร์ยังถูกเก็บไว้ (ทำเครื่องหมายว่าลบแล้ว) จนกว่าจะมีคำขอลบข้อมูลตามหัวข้อด้านล่าง</li>
+      <li>บันทึก (log) ของผู้ให้บริการเซิร์ฟเวอร์เก็บตามระยะเวลาที่ผู้ให้บริการกำหนด</li>
+    </ul>
+  </section>
+
+  <section class="card delete" id="th-delete">
+    <h2>ขอลบบัญชีและข้อมูล</h2>
+    <p>คุณขอให้ลบบัญชีและข้อมูลทั้งหมดบนเซิร์ฟเวอร์ได้ทุกเมื่อ โดยไม่ต้องลบแอปก่อน</p>
+    <h3>ขั้นตอน</h3>
+    <ol class="steps">
+      <li>เปิดแอปไปกัน แตะแท็บ <strong>บัญชี</strong></li>
+      <li>ในการ์ด “บัญชีของฉัน” จะเห็น <strong>รหัสผู้ใช้</strong> แตะ <strong>“อีเมลขอลบข้อมูล”</strong> แอปจะเปิดอีเมลถึงเราพร้อมใส่รหัสผู้ใช้ให้แล้ว (หรือกด “แชร์รหัสผู้ใช้” แล้วส่งเอง)</li>
+      <li>ส่งอีเมลไปที่ <a href="mailto:rpcapokemon@gmail.com?subject=%E0%B8%82%E0%B8%AD%E0%B8%A5%E0%B8%9A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B5%E0%B9%84%E0%B8%9B%E0%B8%81%E0%B8%B1%E0%B8%99">rpcapokemon@gmail.com</a> หัวข้อ “ขอลบบัญชีไปกัน” พร้อมรหัสผู้ใช้</li>
+    </ol>
+    <h3>สิ่งที่จะถูกลบ</h3>
+    <ul>
+      <li>บัญชีผู้ใช้แบบไม่ระบุตัวตนของคุณ</li>
+      <li>ทุกทริปที่คุณเป็นเจ้าของ รวมรายชื่อ ที่พัก หน้าที่ แผนเที่ยว ค่าใช้จ่าย และรหัสเชิญของทริปนั้น (ทริปที่ลบในแอปไปแล้วด้วย)</li>
+      <li>การเป็นสมาชิกของคุณในทริปของคนอื่น และการผูกชื่อ “ฉันคือ...”</li>
+    </ul>
+    <p>ชื่อเล่นของคุณที่คนอื่นพิมพ์ไว้ในทริปของเขาเป็นส่วนหนึ่งของทริปนั้น ให้ขอเจ้าของทริปลบออก หรือแจ้งเราพร้อมรายละเอียดทริป แล้วเราจะช่วยดำเนินการ</p>
+    <p>เราจะดำเนินการ<strong>ภายใน 30 วัน</strong>นับจากวันที่ได้รับคำขอ และตอบกลับทางอีเมล</p>
+    <p class="warn">ถ้าลบแอปหรือล้างข้อมูลแอปไปแล้ว รหัสผู้ใช้เดิมจะหายไปด้วย (ยังไม่มีระบบเข้าสู่ระบบด้วยอีเมล) ในกรณีนี้ให้แจ้งชื่อทริป วันเดินทาง และจังหวัดมาทางอีเมล เราจะพยายามค้นหาให้ แต่อาจยืนยันไม่ได้ว่าเป็นข้อมูลของคุณ</p>
+  </section>
+
+  <section class="card">
+    <h2>9. สิทธิ์ของคุณตาม PDPA</h2>
+    <p>คุณมีสิทธิ์ขอเข้าถึงและขอรับสำเนาข้อมูล ขอแก้ไขข้อมูลให้ถูกต้อง ขอลบข้อมูล ขอระงับหรือคัดค้านการประมวลผล และขอโอนย้ายข้อมูล ส่งคำขอได้ที่ <a href="mailto:rpcapokemon@gmail.com">rpcapokemon@gmail.com</a> พร้อมรหัสผู้ใช้ เราจะตอบภายใน 30 วัน และคุณมีสิทธิ์ร้องเรียนต่อสำนักงานคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล (สคส.)</p>
+    <p>ข้อมูลส่วนใหญ่ในทริปแก้ไขได้เองในแอป (เจ้าของทริปแก้รายชื่อ ที่พัก และข้อมูลทริปได้)</p>
+  </section>
+
+  <section class="card">
+    <h2>10. เด็ก</h2>
+    <p>แอปไม่ได้ออกแบบมาสำหรับเด็ก เด็กอายุต่ำกว่า 13 ปีไม่ควรใช้แอปโดยไม่มีผู้ปกครองดูแล หากพบว่ามีข้อมูลของเด็กที่ไม่ได้รับความยินยอมจากผู้ปกครอง แจ้งเราเพื่อลบได้</p>
+  </section>
+
+  <section class="card">
+    <h2>11. การเปลี่ยนแปลงนโยบาย</h2>
+    <p>หากเราเปลี่ยนแปลงนโยบายนี้ เราจะแก้วันที่มีผลด้านบน และแจ้งในแอปหากเป็นการเปลี่ยนแปลงสำคัญ เช่น เริ่มเก็บข้อมูลประเภทใหม่</p>
+  </section>
+</article>
+
+<hr class="lang">
+
+<!-- ============================== English ============================== -->
+<article id="en" lang="en">
+  <header class="top">
+    <p class="brand">PaiGan · ไปกัน</p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: 9 November 2026</p>
+    <nav class="lang-switch" aria-label="Language">
+      <a href="#en-delete">Delete account and data</a>
+      <a href="#th" lang="th">ภาษาไทย</a>
+    </nav>
+  </header>
+
+  <section class="card">
+    <h2>1. Who we are</h2>
+    <p>“PaiGan (ไปกัน)” is a trip planning app for solo and group travel, developed and operated by the developer of PaiGan, who is the data controller under Thailand’s Personal Data Protection Act B.E. 2562 (PDPA).</p>
+    <p>Privacy contact: <a href="mailto:rpcapokemon@gmail.com">rpcapokemon@gmail.com</a></p>
+  </section>
+
+  <section class="card">
+    <h2>2. Data stored on our server, and why</h2>
+    <p>You do not sign up with an email or phone number. On first launch the app creates an anonymous account automatically. The data below is uploaded so everyone in a trip sees the same information and your trips are backed up.</p>
+    <table>
+      <thead><tr><th>Data</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Anonymous user ID (randomly generated) and usage timestamps</td><td>Control which account can access which trip, and sync data</td></tr>
+        <tr><td>Nicknames of trip members, and which name is “me”</td><td>Member list, task assignment and expense splitting</td></tr>
+        <tr><td>Member skills (e.g. driving, cooking, can swim, motorcycle licence), drinks alcohol or not, and whether a member is a senior</td><td>Assign suitable tasks, e.g. lighter tasks for seniors</td></tr>
+        <tr><td>Trip details: trip type, travel dates, number of adults/children/seniors, rooms, province/district and chosen travel styles</td><td>Build the packing list, tasks and day plan</td></tr>
+        <tr><td>Accommodation names typed by the trip owner</td><td>Let everyone in the trip see where they are staying</td></tr>
+        <tr><td>Tasks and items to prepare, assignees, due dates and completion status</td><td>Track who does what</td></tr>
+        <tr><td>Daily itinerary (times, activity names, notes, assignees)</td><td>Share the plan with the group</td></tr>
+        <tr><td>Expenses: item, amount, payer, split method, notes and repayments between members</td><td>Split costs and show who owes whom</td></tr>
+        <tr><td>Invite codes (stored as one-way sha256 hashes) and failed code attempts</td><td>Let friends join a trip and prevent code guessing</td></tr>
+        <tr><td>IP address and connection data in our hosting provider’s logs</td><td>Security and troubleshooting, kept per the provider’s policy</td></tr>
+      </tbody>
+    </table>
+    <p>Legal basis: providing the service you request (contract) and our legitimate interest in keeping the system secure.</p>
+  </section>
+
+  <section class="card">
+    <h2>3. Data that stays on your device only</h2>
+    <ul>
+      <li>Your PromptPay number (kept in the device’s encrypted storage)</li>
+      <li>Your personal “things I need to bring” checklist</li>
+      <li>Trip summary images you create; they leave the device only when you share or save them</li>
+      <li>Member list files (Excel/CSV) you import; the app reads them on the device and only adds the nicknames to the trip</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>4. What we do not collect or do</h2>
+    <ul>
+      <li>No GPS location, email address or phone number</li>
+      <li>No health data (e.g. medical conditions or food allergies)</li>
+      <li>We do not read photos on your device; the app only asks to <strong>save</strong> a trip summary image to your gallery when you tap save</li>
+      <li>No ads, and no tracking or usage analytics</li>
+      <li>We <strong>do not sell</strong> your data and <strong>do not share</strong> it with third parties for marketing or other purposes</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>5. Service providers that process data for us</h2>
+    <p>We use <strong>Supabase</strong> for the database and user accounts. Servers are located in the <strong>Singapore</strong> region. Supabase processes data only on our instructions.</p>
+    <p>When you tap “search on map”, the app opens Google Maps with the accommodation name. When you share an image or invite link through another app (e.g. LINE), that app’s policy applies. Both happen only when you tap them.</p>
+  </section>
+
+  <section class="card">
+    <h2>6. Who can see your trip</h2>
+    <ul>
+      <li>Trip data is visible only to accounts in that trip: the owner and friends who joined with an invite code or link. Access is checked by the database on every request (Row Level Security).</li>
+      <li>The owner can edit everything. Friends can tick tasks, edit the plan and record expenses; the member list, accommodation and trip details can be edited by the owner only.</li>
+      <li>Data between the app and the server is encrypted in transit (HTTPS).</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>7. Friends’ names you add</h2>
+    <p>A trip owner can type or import nicknames of friends who do not use the app. <strong>Before adding another person’s name, skills, drinking preference or senior status, the trip owner should get that person’s consent</strong>, and add only what is needed for planning (a nickname is enough).</p>
+  </section>
+
+  <section class="card">
+    <h2>8. How long we keep data</h2>
+    <ul>
+      <li>We keep trip data while your account is in use, or until you ask us to delete it.</li>
+      <li>When the owner taps “delete this trip” in the app, the trip disappears from everyone’s device immediately, but a copy marked as deleted remains on the server until a deletion request is made as described below.</li>
+      <li>Hosting provider logs are kept for the period set by the provider.</li>
+    </ul>
+  </section>
+
+  <section class="card delete" id="en-delete">
+    <h2>Delete account and data</h2>
+    <p>You can ask us to delete your account and all of your data on our server at any time, without uninstalling the app first.</p>
+    <h3>Steps</h3>
+    <ol class="steps">
+      <li>Open PaiGan and tap the <strong>บัญชี (Account)</strong> tab.</li>
+      <li>The “บัญชีของฉัน (My account)” card shows your <strong>user ID</strong>. Tap <strong>“อีเมลขอลบข้อมูล” (email deletion request)</strong> to open an email to us with your user ID filled in, or tap “แชร์รหัสผู้ใช้” (share user ID) and send it yourself.</li>
+      <li>Email <a href="mailto:rpcapokemon@gmail.com?subject=Delete%20my%20PaiGan%20account">rpcapokemon@gmail.com</a> with the subject “Delete my PaiGan account” and your user ID.</li>
+    </ol>
+    <h3>What will be deleted</h3>
+    <ul>
+      <li>Your anonymous user account</li>
+      <li>Every trip you own, including its members, accommodation, tasks, itinerary, expenses and invite codes (including trips you already deleted in the app)</li>
+      <li>Your membership in other people’s trips, and your “I am…” name link</li>
+    </ul>
+    <p>Your nickname typed by someone else in their trip is part of that trip. Ask the trip owner to remove it, or email us with the trip details and we will help.</p>
+    <p>We will complete the request <strong>within 30 days</strong> of receiving it and reply by email.</p>
+    <p class="warn">If you have uninstalled the app or cleared its data, your user ID is gone too (there is no email login yet). In that case, email us the trip name, travel dates and province. We will try to find it, but we may not be able to confirm the data is yours.</p>
+  </section>
+
+  <section class="card">
+    <h2>9. Your rights under the PDPA</h2>
+    <p>You have the right to access and obtain a copy of your data, correct it, delete it, restrict or object to its processing, and request data portability. Send requests to <a href="mailto:rpcapokemon@gmail.com">rpcapokemon@gmail.com</a> with your user ID; we will reply within 30 days. You may also complain to Thailand’s Personal Data Protection Committee (PDPC).</p>
+    <p>Most trip data can be edited directly in the app (the trip owner can edit members, accommodation and trip details).</p>
+  </section>
+
+  <section class="card">
+    <h2>10. Children</h2>
+    <p>The app is not designed for children. Children under 13 should not use the app without a parent or guardian. If you believe a child’s data was added without parental consent, contact us and we will delete it.</p>
+  </section>
+
+  <section class="card">
+    <h2>11. Changes to this policy</h2>
+    <p>If we change this policy we will update the effective date above, and notify you in the app for significant changes such as collecting a new type of data.</p>
+  </section>
+</article>
+
+<footer>ไปกัน (PaiGan) · <a href="mailto:rpcapokemon@gmail.com">rpcapokemon@gmail.com</a></footer>
+</main>
+</body>
+</html>
