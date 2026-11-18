@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ยืนยันว่าเป็นคนจริง — ไปกัน</title>
+  <!--
+    หน้ายืนยัน CAPTCHA ของแอปไปกัน (Cloudflare Turnstile) — แอปเปิดหน้านี้ใน WebView ที่มองไม่เห็น
+    แล้วรับ token กลับทาง window.ReactNativeWebView.postMessage (ดู src/services/captcha.ts)
+    นำไฟล์นี้ไปวางที่ https://rpcapokemon-ai.github.io/paigan-legal/captcha/index.html
+    (เพิ่มโดเมน rpcapokemon-ai.github.io ในรายการโดเมนของ Turnstile widget ด้วย)
+    หน้านี้ไม่เก็บข้อมูลใดๆ — Site key มาจาก query (?sitekey=...) เปิดเผยได้ ไม่ใช่ความลับ
+  -->
+  <style>
+    html, body { margin: 0; background: transparent; font-family: sans-serif; }
+    body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="widget"></div>
+  <script>
+    (function () {
+      function send(message) {
+        if (window.ReactNativeWebView && window.ReactNativeWebView.postMessage) {
+          window.ReactNativeWebView.postMessage(JSON.stringify(message));
+        }
+      }
+
+      var params = new URLSearchParams(window.location.search);
+      var siteKey = params.get('sitekey') || '';
+      // Site key ของ Turnstile เป็นตัวอักษร/ตัวเลข/ขีด/ขีดล่างเท่านั้น
+      if (!/^[A-Za-z0-9_-]{8,64}$/.test(siteKey)) {
+        send({ type: 'error', code: 'bad-sitekey' });
+        return;
+      }
+
+      window.onTurnstileLoad = function () {
+        try {
+          window.turnstile.render('#widget', {
+            sitekey: siteKey,
+            // แสดงกล่องเฉพาะตอนต้องให้ผู้ใช้กดเอง — ปกติทำงานเงียบ
+            appearance: 'interaction-only',
+            callback: function (token) { send({ type: 'token', token: token }); },
+            'before-interactive-callback': function () { send({ type: 'interactive' }); },
+            'error-callback': function (code) { send({ type: 'error', code: String(code || 'unknown') }); return true; },
+            'expired-callback': function () { send({ type: 'expired' }); },
+            'timeout-callback': function () { send({ type: 'expired' }); }
+          });
+        } catch (e) {
+          send({ type: 'error', code: 'render' });
+        }
+      };
+
+      var script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad';
+      script.async = true;
+      script.defer = true;
+      script.onerror = function () { send({ type: 'error', code: 'script-load' }); };
+      document.head.appendChild(script);
+    })();
+  </script>
+</body>
+</html>
