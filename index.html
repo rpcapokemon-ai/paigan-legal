@@ -87,7 +87,7 @@
   <header class="top">
     <p class="brand">ไปกัน · PaiGan</p>
     <h1>นโยบายความเป็นส่วนตัว</h1>
-    <p class="meta">มีผลตั้งแต่วันที่ 9 พฤศจิกายน 2569 (ค.ศ. 2026)</p>
+    <p class="meta">มีผลตั้งแต่วันที่ 20 พฤศจิกายน 2569 (ค.ศ. 2026)</p>
     <nav class="lang-switch" aria-label="ภาษา / Language">
       <a href="#th-delete">ขอลบบัญชีและข้อมูล</a>
       <a href="#en" lang="en">English</a>
@@ -146,6 +146,7 @@
   <section class="card">
     <h2>5. ผู้ให้บริการที่ประมวลผลข้อมูลแทนเรา</h2>
     <p>เราใช้ <strong>Supabase</strong> เป็นผู้ให้บริการฐานข้อมูลและระบบบัญชีผู้ใช้ เซิร์ฟเวอร์ตั้งอยู่ที่ภูมิภาค<strong>สิงคโปร์ (Singapore)</strong> Supabase ประมวลผลข้อมูลตามคำสั่งของเราเท่านั้น</p>
+    <p>ตอนเปิดแอปครั้งแรก (หรือเมื่อต้องเข้าสู่ระบบใหม่) แอปใช้ <strong>Cloudflare Turnstile</strong> ตรวจว่าเป็นคนจริง เพื่อป้องกันการสร้างบัญชีปลอมจำนวนมาก Cloudflare อาจได้รับหมายเลข IP และข้อมูลเบราว์เซอร์พื้นฐานของอุปกรณ์ในขั้นตอนนี้ตามนโยบายของ Cloudflare เราไม่ได้ส่งชื่อ ข้อมูลทริป หรือข้อมูลส่วนตัวใดๆ ไปในขั้นตอนนี้</p>
     <p>เมื่อคุณกด “ค้นในแผนที่” แอปจะเปิด Google Maps พร้อมชื่อที่พักเพื่อค้นหา และเมื่อคุณแชร์ภาพหรือลิงก์เชิญผ่านแอปอื่น (เช่น LINE) ข้อมูลที่ส่งไปจะอยู่ภายใต้นโยบายของแอปนั้น ทั้งสองกรณีเกิดขึ้นเฉพาะเมื่อคุณกดเอง</p>
   </section>
 
@@ -168,6 +169,7 @@
     <ul>
       <li>เราเก็บข้อมูลทริปไว้ตราบเท่าที่บัญชีของคุณยังใช้งาน หรือจนกว่าคุณจะขอให้ลบ</li>
       <li>เมื่อเจ้าของทริปกด “ลบทริปนี้” ในแอป ทริปจะหายจากเครื่องของทุกคนในทริปทันที แต่สำเนาบนเซิร์ฟเวอร์ยังถูกเก็บไว้ (ทำเครื่องหมายว่าลบแล้ว) จนกว่าจะมีคำขอลบข้อมูลตามหัวข้อด้านล่าง</li>
+      <li>บัญชีแบบไม่ระบุตัวตนที่ไม่ได้ใช้งานเกิน 90 วัน และไม่ได้อยู่ในทริปใดบนเซิร์ฟเวอร์เลย จะถูกลบเป็นรอบ (ข้อมูลในเครื่องของคุณไม่หาย เปิดแอปครั้งถัดไปจะได้บัญชีใหม่โดยอัตโนมัติ)</li>
       <li>บันทึก (log) ของผู้ให้บริการเซิร์ฟเวอร์เก็บตามระยะเวลาที่ผู้ให้บริการกำหนด</li>
     </ul>
   </section>
@@ -216,7 +218,7 @@
   <header class="top">
     <p class="brand">PaiGan · ไปกัน</p>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: 9 November 2026</p>
+    <p class="meta">Effective date: 20 November 2026</p>
     <nav class="lang-switch" aria-label="Language">
       <a href="#en-delete">Delete account and data</a>
       <a href="#th" lang="th">ภาษาไทย</a>
@@ -274,6 +276,7 @@
   <section class="card">
     <h2>5. Service providers that process data for us</h2>
     <p>We use <strong>Supabase</strong> for the database and user accounts. Servers are located in the <strong>Singapore</strong> region. Supabase processes data only on our instructions.</p>
+    <p>When you first open the app (or need to sign in again), the app uses <strong>Cloudflare Turnstile</strong> to check that you are a real person, to prevent mass creation of fake accounts. Cloudflare may receive your IP address and basic browser information from the device during this step, under Cloudflare’s own policy. We send no name, trip data or other personal data in this step.</p>
     <p>When you tap “search on map”, the app opens Google Maps with the accommodation name. When you share an image or invite link through another app (e.g. LINE), that app’s policy applies. Both happen only when you tap them.</p>
   </section>
 
@@ -296,6 +299,7 @@
     <ul>
       <li>We keep trip data while your account is in use, or until you ask us to delete it.</li>
       <li>When the owner taps “delete this trip” in the app, the trip disappears from everyone’s device immediately, but a copy marked as deleted remains on the server until a deletion request is made as described below.</li>
+      <li>Anonymous accounts that have not been used for more than 90 days and are not part of any trip on the server are deleted periodically. Data on your device is kept; the app creates a new account automatically the next time you open it.</li>
       <li>Hosting provider logs are kept for the period set by the provider.</li>
     </ul>
   </section>
